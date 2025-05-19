@@ -1,0 +1,176 @@
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  background-color: #fef3c7;
+  margin: 0;
+  padding: 0;
+}
+        
+.zaglavlje {
+  background-color: #92400e;
+  color: white;
+  position: relative;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+}
+        
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+        
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+        
+.nav a:hover {
+  text-decoration: underline;
+}
+        
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+        
+.clanak {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+        
+.clanak-naslov {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #92400e;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+        
+.podnozje {
+  background-color: #92400e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+        
+.lista1 {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+
+.lista2 {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+        
+        
+.list-predmeta {
+  margin-bottom: 8px;
+}
+        
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+        
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  background-color: #fef3c7;
+}
+
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+        
+.p1 {
+  margin-bottom: 15px;
+}
+
+.burger-meni {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.burger-ikonica {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.burger-ikonica span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger-ikonica span:nth-child(1) {
+    top: 0px;
+}
+
+.burger-ikonica span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-ikonica span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #92400e;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 10;
+    }
+
+    .nav.otvoreno {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+
+    .burger-meni {
+        display: block;
+    }
+}
