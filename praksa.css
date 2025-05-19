@@ -177,3 +177,31 @@ body {
         display: block;
     }
 }
+
+#backToTopBtn {
+ display: none;
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ background-color: #92400e;
+ color: white;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ cursor: pointer;
+ opacity: 0.7;
+ transition: opacity 0.3s ease-in-out;
+ justify-content: center;
+ align-items: center;
+ z-index: 1000;
+}
+
+#backToTopBtn:hover {
+ opacity: 1;
+}
+
+#backToTopBtn svg {
+ width: 24px;
+ height: 24px;
+ fill: white;
+}
