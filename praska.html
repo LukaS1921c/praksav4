@@ -118,10 +118,25 @@
      <script>
   const burgerMeni = document.querySelector('.burger-meni');
   const glavnaNavigacija = document.getElementById('glavnaNavigacija');
+  const navLinkovi = glavnaNavigacija.querySelectorAll('a');
 
   if (burgerMeni && glavnaNavigacija) {
     burgerMeni.addEventListener('click', () => {
       glavnaNavigacija.classList.toggle('otvoreno');
+    });
+
+    navLinkovi.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Spriječi standardno skakanje na sidro
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          glavnaNavigacija.classList.remove('otvoreno'); // Zatvori meni nakon klika
+        }
+      });
     });
   }
 </script>
