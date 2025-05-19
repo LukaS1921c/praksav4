@@ -7,16 +7,6 @@
     <link rel="stylesheet" href="praksa.css">
 </head>
 <body>
-    <script>
-  const burgerMeni = document.querySelector('.burger-meni');
-  const glavnaNavigacija = document.getElementById('glavnaNavigacija');
-
-  if (burgerMeni && glavnaNavigacija) {
-    burgerMeni.addEventListener('click', () => {
-      glavnaNavigacija.classList.toggle('otvoreno');
-    });
-  }
-</script>
     <header class="zaglavlje">
         <h1>Knjigoveška dorada</h1>
         <div class="burger-meni">
@@ -125,5 +115,15 @@
     <footer class="podnozje">
         <p>© 2023 Knjigoveška dorada</p>
     </footer>
+     <script>
+  const burgerMeni = document.querySelector('.burger-meni');
+  const glavnaNavigacija = document.getElementById('glavnaNavigacija');
+
+  if (burgerMeni && glavnaNavigacija) {
+    burgerMeni.addEventListener('click', () => {
+      glavnaNavigacija.classList.toggle('otvoreno');
+    });
+  }
+</script>
 </body>
 </html>
